@@ -15,7 +15,7 @@ export default function (core) {
         prefix: `/${key}`,
       }));
 
-      routers[key].default(core, hookRouters[hookRouters.length]);
+      routers[key].default(core, hookRouters[hookRouters.length - 1]);
     }
   });
 
