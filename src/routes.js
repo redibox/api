@@ -20,4 +20,4 @@ export default function (core) {
   });
 
   return combineRouters(hookRouters);
-};
+}
