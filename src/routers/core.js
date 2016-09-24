@@ -1,5 +1,6 @@
 export default function (core, router) {
   router
+
   /**
    * Returns basic information about core RediBox setup.
    */
