@@ -18,6 +18,7 @@ export default class Scheduler extends BaseHook {
     app.name = 'redibox-hook-api';
     app.env = this.options.env;
 
+    // Return a structured format response
     app.use(async(ctx, next) => {
       await next();
 
@@ -29,6 +30,7 @@ export default class Scheduler extends BaseHook {
       }
     });
 
+    // Handle un-authorized requests
     app.use(async(ctx, next) => {
       try {
         await next();
@@ -43,10 +45,12 @@ export default class Scheduler extends BaseHook {
       }
     });
 
+    // Apply authentication if enabled
     if (this.options.auth.enabled && this.options.auth.middleware && isFunction(this.options.auth.middleware)) {
       app.use(this.options.auth.middleware(this));
     }
 
+    // Handle server errors
     app.use(async(ctx, next) => {
       try {
         await next();
@@ -64,6 +68,7 @@ export default class Scheduler extends BaseHook {
       }
     });
 
+    // Handle 404s
     app.use(async(ctx, next) => {
       await next();
 
@@ -73,8 +78,10 @@ export default class Scheduler extends BaseHook {
       ctx.body = 'The requested resource cannot be found.';
     });
 
+    // Apply routes
     app.use(router(this.core));
 
+    // Listen to inbound HTTP calls
     return new Promise((resolve, reject) => {
       app.listen(this.options.port, this.options.host, this.options.backlog, error => {
         if (error) {
