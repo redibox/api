@@ -1,7 +1,7 @@
 {
   "name": "redibox-hook-api",
   "description": "A JSON API for RediBox",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "author": "",
   "repository": {
