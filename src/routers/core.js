@@ -11,7 +11,7 @@ export default function (core, router) {
         id: core.id,
         options,
         uptimeSeconds: Math.floor((Date.now() - core.bootedAtTimestamp) / 1000),
-        hooks: core._hooksCount - 2, // Remove built in hooks count
+        hooks: Object.keys(core.hooks).length,
         clients: core._clientCount,
       };
     })

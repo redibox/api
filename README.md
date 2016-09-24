@@ -23,7 +23,7 @@ Install API via npm:
 
 #### Configure api
 
-By default your API will work out of the box, accessible at `[http://127.0.0.1:1337](http://127.0.0.1:1337)` with no authentication.
+By default your API will work out of the box, accessible at [http://127.0.0.1:1337](http://127.0.0.1:1337) with no authentication.
 
 To override the defaults, create a new `api` object within your `redibox` config:
 
@@ -50,7 +50,15 @@ See [authentication](https://github.com/redibox/api#authentication).
 
 ### Routes
 
-// TODO
+Routes work on a per hook basis, depending on what is installed & all routes are prefixed by their hook name. Since you've got this hook installed,
+both `core` & `api` are available at minimum on the API.
+
+- [Core]()
+- [API]()
+- [Job]()
+- [Schedule]()
+- [Cache]()
+- [Memset]()
 
 ### Authentication
 
