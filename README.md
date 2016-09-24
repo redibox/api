@@ -37,7 +37,7 @@ To override the defaults, create a new `api` object within your `redibox` config
   - default: `process.env.NODE_ENV` or `development`
 
 - **auth** [Object]
-See [authentication]().
+See [authentication](https://github.com/redibox/api#authentication).
 
 ```javascript
 {
