@@ -39,7 +39,7 @@ To override the defaults, create a new `api` object within your `redibox` config
 - **auth** [Object]
 See [authentication]().
 
-```
+```javascript
 {
   api: {
     port: 4000,
@@ -81,7 +81,7 @@ provides the current hook as the only parameter, if needed. The function should 
 The below example is loading a cached authentication token from Redis. This is just a basic example of
 how to apply asynchronous authentication middleware.
 
-```
+```javascript
 middleware(hook) {
   return async function getUser(ctx, next){
     const token = ctx.header.token;
