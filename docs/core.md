@@ -2,22 +2,22 @@
 
 All core API routes are prefixed by `/core`.
 
-### GET `/`
+#### `GET /`
 
 Provides basic information about the current RediBox setup.
 
-### GET `/host-info`
+#### `GET /host-info`
 
 Returns a payload response directly from the `hostInfo()` RediBox method.
 
-### GET `/scripts`
+#### `GET /scripts`
 
 Returns all injected lua scripts.
 
-### `/hooks`
+#### `GET /hooks`
 
 Returns an array of all installed RediBox hooks.
 
-### `/hooks/:hook`
+#### `GET /hooks/:hook`
 
 Returns all information about a specific installed hook.

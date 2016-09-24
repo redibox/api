@@ -2,4 +2,4 @@
 
 All job API routes are prefixed by `/job`.
 
-### GET `/`
+#### `GET /`

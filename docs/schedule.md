@@ -2,4 +2,4 @@
 
 All schedule API routes are prefixed by `/schedule`.
 
-### GET `/`
+#### `GET /`

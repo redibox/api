@@ -53,12 +53,12 @@ See [authentication](https://github.com/redibox/api#authentication).
 Routes work on a per hook basis, depending on what is installed & all routes are prefixed by their hook name. Since you've got this hook installed,
 both `core` & `api` are available at minimum on the API.
 
-- [Core]()
-- [API]()
-- [Job]()
-- [Schedule]()
-- [Cache]()
-- [Memset]()
+- [Core](https://github.com/redibox/api/blob/master/docs/core.md)
+- [API](https://github.com/redibox/api/blob/master/docs/api.md)
+- [Job](https://github.com/redibox/api/blob/master/docs/job.md)
+- [Schedule](https://github.com/redibox/api/blob/master/docs/schedule.md)
+- [Cache](https://github.com/redibox/api/blob/master/docs/cache.md)
+- [Memset](https://github.com/redibox/api/blob/master/docs/memset.md)
 
 ### Authentication
 

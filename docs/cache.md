@@ -2,4 +2,4 @@
 
 All cache API routes are prefixed by `/cache`.
 
-### GET `/`
+#### `GET /`

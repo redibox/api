@@ -2,4 +2,4 @@
 
 All memset API routes are prefixed by `/memset`.
 
-### GET `/`
+#### `GET /`
