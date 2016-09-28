@@ -27,6 +27,10 @@ By default your API will work out of the box, accessible at [http://127.0.0.1:13
 
 To override the defaults, create a new `api` object within your `redibox` config:
 
+- **enabled** [Boolean]
+  - default: `true`
+If false, the API hook will simply do nothing. This is currently a very crude way to potentially handle multiple API instances in a multi-server environment.
+
 - **host** [String]
   - default: `127.0.0.1`
 

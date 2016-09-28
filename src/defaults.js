@@ -4,6 +4,7 @@ import auth from 'koa-basic-auth';
  Default Configuration
  */
 export default {
+  enabled: true,
   host: '127.0.0.1',
   port: 1337,
   env: process.env.NODE_ENV || 'development',

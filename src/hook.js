@@ -15,6 +15,10 @@ export default class Scheduler extends BaseHook {
    * @returns {Promise.<T>}
    */
   initialize() {
+    if (!this.options.enabled) {
+      return Promise.resolve();
+    }
+
     app.name = 'redibox-hook-api';
     app.env = this.options.env;
 
