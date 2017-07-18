@@ -1,2 +1,5 @@
-import Hook from './hook';
-export default Hook;
+const api = config => (req, res, next) => {
+  next();
+};
+
+module.exports = api;
