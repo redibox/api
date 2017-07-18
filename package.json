@@ -11,7 +11,7 @@
     "unit": "jest",
     "unit:coverage": "jest --coverage",
     "test": "npm run lint && npm run unit",
-    "demo": "nodemon test.js 6000"
+    "demo": "nodemon test.js 1337"
   },
   "repository": {
     "type": "git",
