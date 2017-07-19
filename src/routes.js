@@ -5,6 +5,7 @@ function routes(app, prefix, core) {
 
   get('/', (req, res) => {
     res.json({
+      prefix,
       id: core.id,
       options: core.options,
       uptimeSeconds: getUptime(core.bootedAtTimestamp),
@@ -15,12 +16,24 @@ function routes(app, prefix, core) {
     });
   });
 
+  get('/prefix', (req, res) => {
+    res.json(prefix);
+  });
+
   get('/id', (req, res) => {
     res.json(core.id);
   });
 
   get('/options', (req, res) => {
     res.json(core.options);
+  });
+
+  get('/options/redis', (req, res) => {
+    res.json(core.options.redis);
+  });
+
+  get('/options/redis/hosts', (req, res) => {
+    res.json(core.options.redis.hosts);
   });
 
   get('/uptime', (req, res) => {
