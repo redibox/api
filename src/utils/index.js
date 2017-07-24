@@ -1,8 +1,7 @@
-const getUptime = ts => Math.floor((Date.now() - ts) / 1000);
+const { dateNow } = require('./aliases');
 
-const getHooks = hs => Object.keys(hs);
+const getUptime = ts => Math.floor((dateNow() - ts) / 1000);
 
 module.exports = {
   getUptime,
-  getHooks,
 };

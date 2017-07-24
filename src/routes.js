@@ -1,4 +1,4 @@
-const { getUptime, getHooks } = require('./utils');
+const { getUptime } = require('./utils');
 
 function routes(app, prefix, core) {
   const get = (path, cb) => app.get(`${prefix}${path}`, cb);
@@ -9,7 +9,7 @@ function routes(app, prefix, core) {
       id: core.id,
       options: core.options,
       uptimeSeconds: getUptime(core.bootedAtTimestamp),
-      hooks: getHooks(core.hooks),
+      hooks: Object.keys(core.hooks),
       clientsCount: core._clientCount,
       hostInfo: core.hostInfo(),
       scripts: core.scripts,
@@ -41,7 +41,7 @@ function routes(app, prefix, core) {
   });
 
   get('/hooks', (req, res) => {
-    res.json(getHooks(core.hooks));
+    res.json(Object.keys(core.hooks));
   });
 
   get('/clientscount', (req, res) => {
