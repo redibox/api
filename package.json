@@ -24,8 +24,13 @@
   },
   "homepage": "https://github.com/redibox/api#readme",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.15.3",
-    "redibox": "^2.3.0"
+    "redibox": "^2.3.0",
+    "redibox-hook-cache": "^1.0.4",
+    "redibox-hook-job": "^1.2.18",
+    "redibox-hook-memset": "^1.0.3",
+    "redibox-hook-schedule": "^2.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
